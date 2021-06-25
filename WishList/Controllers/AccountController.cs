@@ -73,6 +73,7 @@ namespace WishList.Controllers
                 ApplicationUser applicationUser = new ApplicationUser();
                 applicationUser.UserName = loginViewModel.Email;
                 applicationUser.Email = loginViewModel.Email;
+              
                 var result = _signInManager.PasswordSignInAsync(applicationUser.UserName
                     , loginViewModel.Password
                     , false
